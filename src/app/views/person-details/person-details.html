@@ -72,10 +72,10 @@
             <h2 class="text-2xl font-bold mb-4">Filme:</h2>
             <div class="flex flex-wrap gap-2">
               <div class="clip-set flex flex-wrap items-center gap-2">
-                @for (film of films; track film.url) {
+                @for (film of films; track film.url; let i = $index) {
                   <div
                     class="chip bg-gray-200 py-2 px-4 cursor-pointer hover:bg-gray-300 transition-colors"
-                    (click)="navigateToFilm(film)">
+                    (click)="navigateToFilm(film, i)">
                     {{ film.title }}
                   </div>
                 }

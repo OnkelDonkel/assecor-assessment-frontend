@@ -70,9 +70,9 @@ export class PersonDetails extends DetailsBaseComponent<Person> {
     });
   }
 
-  navigateToFilm(film: Film) {
+  navigateToFilm(film: Film, index: number) {
     this.router.navigate(['/filmDetail'], {
-      queryParams: {url: film.url}
+      queryParams: {url: film.url, index}
     }).then(success => {
       if (!success) {
         console.warn('Navigation Error');
