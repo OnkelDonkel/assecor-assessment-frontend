@@ -55,7 +55,10 @@
                   {{ character.name }}
                 </div>
               }
-              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+              <div
+                class="chip bg-gray-200 py-2 px-4 cursor-pointer"
+                (click)="addNewCharacter()"
+              >...</div>
             </div>
           </div>
 
@@ -70,7 +73,10 @@
                   {{ planet.name }}
                 </div>
               }
-              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+              <div
+                class="chip bg-gray-200 py-2 px-4 cursor-pointer"
+                (click)="addNewPlanet()"
+              >...</div>
             </div>
           </div>
 

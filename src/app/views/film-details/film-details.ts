@@ -8,6 +8,9 @@ import {DetailsBaseComponent} from '@app/shared/details-base';
 import {Spinner} from '@app/components/spinner/spinner';
 import {RomanPipe} from '@app/pipe/roman.pipe';
 import {Carousel} from '@app/components/carousel/carousel';
+import {PlanetDialog} from '@app/components/dialog/planet-dialog/planet-dialog';
+import {MatDialog} from '@angular/material/dialog';
+import {CharacterDialog} from '@app/components/dialog/character-dialog/character-dialog';
 
 @Component({
   selector: 'app-film-details',
@@ -34,7 +37,8 @@ export class FilmDetails extends DetailsBaseComponent<Film> {
   constructor(
     route: ActivatedRoute,
     router: Router,
-    private peopleService: PeopleService
+    private peopleService: PeopleService,
+    private dialog: MatDialog
   ) {
     super(route, router);
   }
@@ -102,6 +106,32 @@ export class FilmDetails extends DetailsBaseComponent<Film> {
 
   navigateToVehicle(vehicle: Vehicle) {
     console.log('Navigate to starship:', vehicle.name);
+  }
+
+  addNewPlanet(): void {
+    const dialogRef = this.dialog.open(PlanetDialog, {
+      width: '400px',
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Neuer Planet:', result);
+      }
+    });
+  }
+
+  addNewCharacter(): void {
+    const dialogRef = this.dialog.open(CharacterDialog, {
+      width: '400px',
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Neuer Planet:', result);
+      }
+    });
   }
 }
 

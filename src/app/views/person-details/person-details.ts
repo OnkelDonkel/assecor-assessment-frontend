@@ -7,6 +7,9 @@ import {CommonModule} from '@angular/common';
 import {DetailsBaseComponent} from '@app/shared/details-base';
 import {Spinner} from '@app/components/spinner/spinner';
 import {Carousel} from '@app/components/carousel/carousel';
+import {MatDialog} from '@angular/material/dialog';
+import {FilmDialog} from '@app/components/dialog/film-dialog/film-dialog';
+import {PlanetDialog} from '@app/components/dialog/planet-dialog/planet-dialog';
 
 @Component({
   selector: 'app-person-details',
@@ -33,7 +36,8 @@ export class PersonDetails extends DetailsBaseComponent<Person> {
   constructor(
     route: ActivatedRoute,
     router: Router,
-    private peopleService: PeopleService
+    private peopleService: PeopleService,
+    private dialog: MatDialog
   ) {
     super(route, router);
   }
@@ -83,6 +87,32 @@ export class PersonDetails extends DetailsBaseComponent<Person> {
       `https://i.pravatar.cc/300?img=${(index % 70) + 3}`,
       `https://i.pravatar.cc/300?img=${(index % 70) + 4}`
     ];
+  }
+
+  addNewFilm(): void {
+    const dialogRef = this.dialog.open(FilmDialog, {
+      width: '400px',
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Neuer Film:', result);
+      }
+    });
+  }
+
+  addNewPlanet(): void {
+    const dialogRef = this.dialog.open(PlanetDialog, {
+      width: '400px',
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Neuer Planet:', result);
+      }
+    });
   }
 
   navigateToPlanet(planet: Planet) {

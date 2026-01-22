@@ -1,0 +1,94 @@
+<div class="bg-white rounded-lg p-6 w-100">
+  <h2 class="text-2xl font-bold text-center pb-2 my-8">Charakter hinzufügen</h2>
+    <div class="space-y-4">
+      <!-- Name -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+        <input
+          [(ngModel)]="characterData.name"
+          type="text"
+          placeholder="Name eingeben"
+          class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+      </div>
+
+      <!-- size and mass -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Größe</label>
+          <input
+            [(ngModel)]="characterData.size"
+            type="text"
+            placeholder="Meter"
+            class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Gewicht</label>
+          <input
+            [(ngModel)]="characterData.mass"
+            type="number"
+            placeholder="Kg"
+            class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+        </div>
+      </div>
+
+      <!-- hair and eye color -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Haarfarbe</label>
+          <input
+            [(ngModel)]="characterData.hairColor"
+            type="text"
+            placeholder="Haarfarbe eingeben"
+            class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Augenfarbe</label>
+          <select
+            [(ngModel)]="characterData.eyeColor"
+            class="w-full px-3 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-sm">
+            <option value="gelb">Gelb</option>
+            <option value="blau">Blau</option>
+            <option value="braun">Braun</option>
+            <option value="grün">Grün</option>
+            <option value="sonstiges">sonstiges</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- birthyear and gender -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Geburtsjahr</label>
+          <input
+            [(ngModel)]="characterData.birthYear"
+            type="number"
+            placeholder="YYYY"
+            class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Geschlecht</label>
+          <select
+            [(ngModel)]="characterData.gender"
+            class="w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-sm">
+            <option value="männlich">Männlich</option>
+            <option value="weiblich">Weiblich</option>
+            <option value="divers">Divers</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="flex justify-end gap-3 mt-6">
+      <button
+        (click)="onCancel()"
+        class="px-6 py-4 text-gray-700 bg-gray-200 rounded-sm hover:bg-gray-300 transition-colors">
+        Abbrechen
+      </button>
+      <button
+        (click)="onSave()"
+        class="px-6 py-4 text-white bg-gray-800 rounded-sm hover:bg-gray-900 transition-colors">
+        Film hinzufügen
+      </button>
+    </div>
+</div>

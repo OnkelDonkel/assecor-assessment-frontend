@@ -29,3 +29,10 @@ body {
   background-color: white !important;
 }
 
+.mat-mdc-dialog-surface {
+  border-radius: 0 !important;
+  box-shadow: 10px 5px 5px gray;
+}
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, .52);
+}

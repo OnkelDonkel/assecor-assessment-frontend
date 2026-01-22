@@ -4,73 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce9005f-8f67-4fdc-99fa-3cb189b467f5" name="Changes" comment="">
+    <list default="true" id="5ce9005f-8f67-4fdc-99fa-3cb189b467f5" name="Changes" comment="updated Readme">
       <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.postcssrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/card/card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/card/card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/card/card.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/card/card.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/carousel/carousel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/carousel/carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/carousel/carousel.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/carousel/carousel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/header/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/header/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/header/header.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/header/header.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/spinner/spinner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/spinner/spinner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/spinner/spinner.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/spinner/spinner.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pipe/roman.pipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/service/people.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/service/people.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/shared/details-base.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-overview/film-overview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-overview/film-overview.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-overview/film-overview.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/film-overview/film-overview.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/home/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/home/home.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/home/home.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/home/home.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-overview/person-overview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-overview/person-overview.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-overview/person-overview.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/views/person-overview/person-overview.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/death-star.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/bridge-4304946_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/custom-theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/film-dialog/film-dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/film-dialog/film-dialog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/film-dialog/film-dialog.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/film-dialog/film-dialog.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/planet-dialog/planet-dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/planet-dialog/planet-dialog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/planet-dialog/planet-dialog.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/dialog/planet-dialog/planet-dialog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/film-details/film-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/film-details/film-details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/film-details/film-details.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/person-details/person-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/person-details/person-details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/person-details/person-details.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/bridge-4304946_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +51,14 @@
     &quot;accountId&quot;: &quot;76511c3b-8086-4077-b7f8-0611f83f17b1&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.2.12_1/bin/php" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -134,11 +91,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/components/dialog" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/assets/img" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -178,8 +135,25 @@
       <workItem from="1768973999175" duration="1496000" />
       <workItem from="1768977898423" duration="94000" />
       <workItem from="1768978155224" duration="32743000" />
-      <workItem from="1769063341322" duration="20075000" />
+      <workItem from="1769063341322" duration="28243000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1769083854658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769083854658</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated Readme">
+      <option name="closed" value="true" />
+      <created>1769084660392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769084660392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +169,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="updated Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Readme" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
