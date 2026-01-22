@@ -1,0 +1,96 @@
+<header class="bg-white py-4 shadow-md relative z-50">
+  <div class="max-w-7xl mx-auto flex items-center px-6">
+
+    <!-- Logo -->
+    <div class="logo mr-4">
+      <span>Star<br>Wars</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
+      <ul class="flex space-x-6">
+        @for (item of menuItems; track item) {
+          <li class="hover:text-base-light cursor-pointer transition-colors">
+            <a [routerLink]="item.route">{{ item.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <!-- Desktop Search -->
+    <div class="ml-auto hidden md:block">
+      <mat-form-field appearance="outline">
+        <input matInput type="search" placeholder="Search">
+        <button matSuffix mat-icon-button aria-label="Search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <!-- Burger Button -->
+    <button
+      class="ml-auto md:hidden p-2 rounded hover:bg-gray-100"
+      (click)="toggleMenu()"
+      aria-label="Open menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Overlay -->
+@if (mobileOpen) {
+  <div
+    class="fixed inset-0 bg-black/40 z-40"
+    (click)="closeMenu()"
+  ></div>
+}
+
+<!-- Offcanvas Menu -->
+<aside
+  class="fixed top-0 right-0 h-full w-full bg-white z-50 shadow-xl transform transition-transform duration-300 ease-out"
+  [class.translate-x-0]="mobileOpen"
+  [class.translate-x-full]="!mobileOpen"
+>
+  <div class="p-4 border-b flex items-center justify-between">
+    <span class="font-semibold text-lg">Menu</span>
+    <button
+      (click)="closeMenu()"
+      aria-label="Close menu"
+      class="p-2 rounded hover:bg-gray-100"
+    >✕
+    </button>
+  </div>
+
+  <nav class="p-4 mt-8">
+    <ul class="flex flex-col space-y-4">
+      @for (item of menuItems; track item) {
+        <li>
+          <a
+            [routerLink]="item.route"
+            (click)="closeMenu()"
+            class="block text-lg hover:text-base-light"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <div class="mt-6">
+      <mat-form-field class="w-full" appearance="outline">
+        <input matInput type="search" placeholder="Search">
+        <button matSuffix mat-icon-button aria-label="Search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </nav>
+</aside>
+
+
+

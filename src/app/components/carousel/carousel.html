@@ -1,0 +1,27 @@
+<div class="relative w-full max-w-xl mx-auto overflow-hidden">
+  <!-- Slides -->
+  <div class="relative overflow-hidden rounded-lg">
+    <div
+      class="flex transition-transform duration-500"
+      [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+    >
+      @for (img of images; track img) {
+        <img
+          [src]="img"
+          class="w-full flex-shrink-0 object-cover"
+          alt="image slide"
+        />
+      }
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="mt-4 flex justify-center gap-2">
+    @for (img of images; track img; let i = $index) {
+      <span (click)="goToSlide(i)"
+            class="w-3 h-3 rounded-full cursor-pointer transition-colors"
+            [ngClass]="i === currentIndex ? 'bg-gray-500' : 'bg-gray-300'">
+    </span>
+    }
+  </div>
+</div>

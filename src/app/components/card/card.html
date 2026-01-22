@@ -1,0 +1,14 @@
+<!-- Card Template -->
+<div class="flex flex-col h-full pb-4">
+  <mat-card class="w-96 h-full flex flex-col" (click)="onCardClick()">
+    <img mat-card-image src="{{ image }}" alt="placeholder image">
+    <mat-card-content class="text-base my-4">
+      <mat-card-title class="text-xl font-bold text-base">{{ title }}</mat-card-title>
+      <p class="text-gray-700 leading-relaxed whitespace-pre-line">{{ content }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="!text-base" matButton (click)="onButtonClick($event)">{{ linkText }}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

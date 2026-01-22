@@ -1,0 +1,30 @@
+.parallax {
+  background-color: #10172C;
+  height: calc(100vh - 72px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &-content {
+
+    .text-box {
+      width: 100%;
+      padding: 0 100px;
+    }
+
+    h1 {
+      font-family: 'death-star', sans-serif;
+      text-transform: uppercase;
+      font-size: 22vw;
+      line-height: .8;
+    }
+  }
+
+
+}

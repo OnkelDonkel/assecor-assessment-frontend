@@ -1,0 +1,23 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 72px;
+  font-family: 'roboto', sans-serif;
+
+
+  .logo {
+    font-size: 1.5rem;
+    font-family: 'death-star', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  ul {
+    font-size: .8rem;
+    margin-left: 4rem;
+  }
+
+  mat-form-field {
+    scale: .7;
+  }
+}

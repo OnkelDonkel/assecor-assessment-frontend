@@ -1,0 +1,113 @@
+<main class="main mt-8 max-w-7xl mx-auto flex flex-col">
+  <div class="container mx-auto p-8 max-w-6xl">
+    @if (loading) {
+      <app-spinner></app-spinner>
+    }
+
+    @if (film && !loading) {
+      <div class="flex flex-col justify-center items-center">
+        <p class="text-1xl">Filmdetails</p>
+        <hr class="w-28 h-px bg-gray-600 block my-3 border-0">
+        <h1 class="text-5xl font-bold mb-2">{{ film.title }}</h1>
+        <p class="text-xl text-gray-600 mb-8">Episode {{ film.episode_id | roman}}</p>
+      </div>
+
+      <button mat-icon-button (click)="goBack('film')" class="mb-4">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="order-2 lg:order-1 lg:col-span-2">
+          <h2 class="text-2xl font-bold mb-4">Details:</h2>
+          <div class="mt-4">
+            @if (film.director) {
+              <div>
+                <p><span class="font-bold">Direktor:</span> {{ film.director }}</p>
+              </div>
+            }
+            @if (film.producer) {
+              <div>
+                <p><span class="font-bold">Produzenten:</span> {{ film.producer }}</p>
+              </div>
+            }
+            @if (film.release_date) {
+              <div>
+                <p><span class="font-bold">Erscheinungsdatum:</span> {{ film.release_date | date:'dd.MM.yyyy' }}</p>
+              </div>
+            }
+          </div>
+
+          @if (film.opening_crawl) {
+            <div class="my-6">
+              <p class="text-gray-700 leading-relaxed">{{ film.opening_crawl }}</p>
+            </div>
+          }
+
+
+          <!-- Charaktere -->
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Charaktere:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (character of characters; track character.url; let i = $index) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToCharacter(character, i)">
+                  {{ character.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+
+          <!-- Planeten -->
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Planeten:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (planet of planets; track planet.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToPlanet(planet)">
+                  {{ planet.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+
+          <!-- Raumschiffe -->
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Raumschiffe:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (starship of starships; track starship.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToStarship(starship)">
+                  {{ starship.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Fahrzeuge:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (vehicle of vehicles; track vehicle.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToVehicle(vehicle)">
+                  {{ vehicle.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2 lg:col-span-1">
+          <app-carousel [images]="getFilmImage()"></app-carousel>
+        </div>
+      </div>
+    }
+  </div>
+</main>

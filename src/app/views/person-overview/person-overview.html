@@ -1,0 +1,29 @@
+<main class="main mt-8 max-w-7xl mx-auto flex flex-col">
+  @if (loading) {
+    <app-spinner></app-spinner>
+  }
+
+  <div class="flex justify-center items-center h-50">
+    <h2 class="text-6xl my-8">Charaktere</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+    @for (person of people; track person.name; let i = $index) {
+      <app-card
+        class="h-full"
+        [title]="person.name"
+        [image]="getStockImage(i)"
+        [content]="getPersonDetails(person)"
+        linkText="Mehr Informationen"
+        (cardClick)="navigateToDetail(person, i)"
+        (buttonClick)="navigateToDetail(person, i)">>
+      </app-card>
+    }
+  </div>
+
+  @if (error) {
+    <div class="text-center mt-8">
+      <p class="text-xl text-red-600">Fehler beim Laden: {{ error }}</p>
+    </div>
+  }
+</main>

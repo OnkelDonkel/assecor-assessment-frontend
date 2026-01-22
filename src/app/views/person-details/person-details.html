@@ -1,0 +1,136 @@
+<main class="main mt-8 max-w-7xl mx-auto flex flex-col">
+  <div class="container mx-auto p-8 max-w-6xl">
+    @if (loading) {
+      <app-spinner></app-spinner>
+    }
+
+    @if (person && !loading) {
+      <div class="flex flex-col justify-center items-center">
+        <p class="text-1xl">Charakterdetails</p>
+        <hr class="w-28 h-px bg-gray-600 block my-3 border-0">
+        <h1 class="text-5xl font-bold mb-2">{{ person.name }}</h1>
+      </div>
+
+      <button mat-icon-button (click)="goBack('/character')" class="mb-4">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="order-2 lg:order-1 lg:col-span-2">
+          <p class="text-2xl">Details:</p>
+
+          <div class="mt-4">
+            @if (person.height) {
+              <div>
+                <p><span class="font-bold">Größe:</span> {{ person.height }} cm</p>
+              </div>
+            }
+
+            @if (person.mass) {
+              <div>
+                <p><span class="font-bold">Gewicht:</span> {{ person.mass }} kg</p>
+              </div>
+            }
+
+            @if (person.hair_color) {
+              <div>
+                <p><span class="font-bold">Haarfarbe:</span> {{ person.hair_color }}</p>
+              </div>
+            }
+
+            @if (person.eye_color) {
+              <div>
+                <p><span class="font-bold">Augenfarbe:</span> {{ person.eye_color }}</p>
+              </div>
+            }
+
+            @if (person.birth_year) {
+              <div>
+                <p><span class="font-bold">Geburtsjahr:</span> {{ person.birth_year }}</p>
+              </div>
+            }
+
+            @if (person.gender) {
+              <div>
+                <p><span class="font-bold">Geschlecht:</span> {{ person.gender }}</p>
+              </div>
+            }
+
+          </div>
+
+          @if (homeworld?.name) {
+          <div class="my-6 flex flex-wrap items-center gap-2">
+            <p class="font-bold">Heimatplanet:</p>
+            <div class="clip-set flex flex-wrap items-center">
+              <div class="chip bg-gray-200 py-2 px-4">{{ homeworld?.name }}</div>
+            </div>
+          </div>
+          }
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Filme:</h2>
+            <div class="flex flex-wrap gap-2">
+              <div class="clip-set flex flex-wrap items-center gap-2">
+                @for (film of films; track film.url) {
+                  <div
+                    class="chip bg-gray-200 py-2 px-4 cursor-pointer hover:bg-gray-300 transition-colors"
+                    (click)="navigateToFilm(film)">
+                    {{ film.title }}
+                  </div>
+                }
+                <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Planeten:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (planet of planets; track planet.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToPlanet(planet)">
+                  {{ planet.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Raumschiffe:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (starship of starships; track starship.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToStarship(starship)">
+                  {{ starship.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4">Fahrzeuge:</h2>
+            <div class="flex flex-wrap gap-2">
+              @for (vehicle of vehicles; track vehicle.name) {
+                <div
+                  class="chip bg-gray-200 py-2 px-4 rounded cursor-pointer hover:bg-gray-300 transition-colors"
+                  (click)="navigateToVehicle(vehicle)">
+                  {{ vehicle.name }}
+                </div>
+              }
+              <div class="chip bg-gray-200 py-2 px-4 cursor-pointer">...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2 lg:col-span-1">
+          <app-carousel [images]="getPersonImage()"></app-carousel>
+        </div>
+      </div>
+    }
+  </div>
+</main>

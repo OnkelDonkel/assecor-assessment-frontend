@@ -1,0 +1,31 @@
+@use "tailwindcss";
+
+// Overwrite Tailwind CSS theme colors
+@theme {
+  --color-base: #10172C;
+  --color-base-light: rgba(16, 23, 44, 0.5);
+}
+
+// Import custom fonts
+@font-face {
+  font-family: 'death-star';
+  src: url('/assets/fonts/death-star.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('/assets/fonts/roboto-regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Global styles
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: roboto, "Helvetica Neue", sans-serif;
+  background-color: white !important;
+}
+
