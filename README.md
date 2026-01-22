@@ -1,6 +1,11 @@
-# AngularWork
+# Frontend Test - AngularWork
+## Assecor Coding-Challenge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+
+## Installation
+```bash
+npm install
+```
 
 ## Development server
 
@@ -11,4 +16,9 @@ ng serve
 ```
 
 ## Generals
-image service: https://pravatar.cc/images
+### API
+Test API: https://swapi.dev/
+
+### Placeholder Images
+- image service: https://pravatar.cc/images
+- image service: https://picsum.photos
